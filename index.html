@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <video loop autoplay muted class="bg-video">
+      <source src="videos/dark weather.mp4" type="video/mp4" />
+    </video>
+
+    <div class="container">
+      <h2 class="text-center mb-3">Live Weather</h2>
+      <form id="weatherForm">
+        <input
+          type="text"
+          placeholder="Enter your city name"
+          id="cityName"
+          required
+        />
+        <button type="submit" class="btn btn-primary mt-2">Get Weather</button>
+      </form>
+
+      <div class="weather-result mt-3">
+        <p class="city"></p>
+        <p class="temp"></p>
+        <p class="humidity"></p>
+        <p class="wind"></p>
+        <p class="description"></p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script type="module" src="script.mjs"></script>
+  </body>
+</html>
